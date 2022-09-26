@@ -1,7 +1,7 @@
 %define pypi_name sqlparse
 
 Name:           python-sqlparse
-Version:        0.3.0
+Version:        0.4.3
 Release:        1
 Group:          Development/Python
 Summary:        Non-validating SQL parser
@@ -44,4 +44,4 @@ rm -rf html/.{doctrees,buildinfo}
 %doc html README.rst
 %{_bindir}/sqlformat
 %{python_sitelib}/%{pypi_name}
-%{python_sitelib}/%{pypi_name}-%{version}-py?.?.egg-info
+%{python_sitelib}/%{pypi_name}-%{version}-py*.egg-info
