@@ -2,7 +2,7 @@
 
 Name:           python-sqlparse
 Version:        0.4.3
-Release:        1
+Release:        2
 Group:          Development/Python
 Summary:        Non-validating SQL parser
 
