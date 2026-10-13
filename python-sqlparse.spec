@@ -2,7 +2,7 @@
 
 Name:		python-sqlparse
 Version:	0.5.5
-Release:	2
+Release:	3
 Group:		Development/Python
 Summary:	A non-validating SQL parser module for Python
 License:	BSD-3-Clause
@@ -13,8 +13,6 @@ BuildArch:	noarch
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	python%{pyver}dist(hatchling)
 BuildRequires:	python%{pyver}dist(pip)
-BuildRequires:	python%{pyver}dist(sphinx)
-BuildRequires:	python%{pyver}dist(sphinx-rtd-theme)
 BuildRequires:	python%{pyver}dist(wheel)
 %{?python_provide:%python_provide python-%{module}}
 Provides:	%{module} = %{version}-%{release}
@@ -31,13 +29,9 @@ chmod -x sqlparse/cli.py
 
 %build
 %py_build
-# generate html docs
-PYTHONDIR=$(pwd) sphinx-build docs/source html
-# remove the sphinx-build leftovers
-rm -rf html/.{doctrees,buildinfo}
 
 %files
-%doc html README.rst
+%doc README.rst
 %{_bindir}/sqlformat
 %{python_sitelib}/%{module}
 %{python_sitelib}/%{module}-%{version}.dist-info
