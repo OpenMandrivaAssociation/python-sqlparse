@@ -2,7 +2,7 @@
 
 Name:		python-sqlparse
 Version:	0.5.5
-Release:	1
+Release:	2
 Group:		Development/Python
 Summary:	A non-validating SQL parser module for Python
 License:	BSD-3-Clause
@@ -10,7 +10,7 @@ URL:		https://github.com/andialbrecht/sqlparse
 Source0:	https://pypi.python.org/packages/source/s/%{module}/%{module}-%{version}.tar.gz#/%{name}-%{version}.tar.gz
 BuildSystem:	python
 BuildArch:	noarch
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python3)
 BuildRequires:	python%{pyver}dist(hatchling)
 BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python%{pyver}dist(sphinx)
